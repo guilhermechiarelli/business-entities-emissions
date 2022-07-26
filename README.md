@@ -12,7 +12,7 @@ To ensure the best operation of the system, all the use cases are covered by uni
 ## Start project
 
 After cloning and accessing this repository, you will have to:
-- Start a Postgres DB instace on port 5432. It can be done with Docker running the comand `docker run --name postgres-db -e POSTGRES_DB=databasename -e POSTGRES_USER=myuser -e POSTGRES_PASSWORD=mysecretpassword -d postgres`;
+- Start a Postgres DB instace on port 5432. It can be done with Docker running the comand `docker run --name postgres-db -e POSTGRES_DB=databasename -e POSTGRES_USER=myuser -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres`;
 - Create a .env file in the root of this repository based on .env.example file available with the information of the Postgres DB instace created;
 - Install the dependecies running the command `npm install`;
 - Run the script `npm run migrations` to create the database schema;
